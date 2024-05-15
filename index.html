@@ -26,11 +26,11 @@
             <input type="text" id="searchInput" placeholder="search...">
         </div>                          
     </header>  
-    <div id="notFound" style="display:none;color: blueviolet;font-size: 5vh;justify-content: center;margin-top: 8vh;text-shadow: 
+    <center id="notFound" style="display:none;color: blueviolet;font-size: 5vh;margin-top: 8vh;text-shadow: 
         -0.8px -0.8px 0 rgba(0,0,0,0.1),  
         0.8px -0.8px 0 rgba(0,0,0,0.1),
         -0.8px 0.8px 0 rgba(0,0,0,0.1),
-        0.8px 0.8px 0 rgba(0,0,0,0.1);">Not Found</div>          
+        0.8px 0.8px 0 rgba(0,0,0,0.1);">Not Found</center>          
     <main>            
         <div id="newsection">
                 <center id="newheading">
@@ -1592,8 +1592,8 @@
     display: flex;
     align-items: center;
     justify-content: center;">  
-             <div><a style="font-size: 2vh;display:flex; align-items: center;"href="mailto: sivasankarkalthireddy1@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="2vh" height="2vh" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16"> <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/> </svg>&nbsp;<p>: chalanachitram@gmail.com</p></a>
-             <center style="color: white;font-size: 1vh;margin-top: -1vh;">&copy; 2024 ChalanaChitram. All Rights Reserved.</center></div>             
+             <center><a style="font-size: 2vh;display:flex; align-items: center;"href="mailto: sivasankarkalthireddy1@gmail.com"><svg id="mailicon" xmlns="http://www.w3.org/2000/svg" width="2vh" height="2vh" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16"> <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/> </svg>&nbsp;<p>: chalanachitram@gmail.com</p></a>
+             <center style="color: white;font-size: 1vh;margin-top: -1vh;">&copy; 2024 ChalanaChitram. All Rights Reserved.</center></center>             
          </div>                          
     </footer>
     <div id="blackshade"></div>
@@ -1618,13 +1618,13 @@
     } else {
       figures[i].style.display = 'none';
       nh.style.position = 'relative'; 
-      oh.style.position = 'relative';                 
+      oh.style.animation = 'left 1s ease forwards';                 
     }
   }
 
   // Show "not found" if no matches found
   if (document.querySelectorAll('figure[style="display: block;"]').length === 0) {
-    notFound.style.display = 'flex';
+    notFound.style.display = 'block';
   } else {
     notFound.style.display = 'none';
   }
