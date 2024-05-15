@@ -102,7 +102,7 @@ margin-top: -1.5vh;
 #oldsection {
     position: relative;
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
     top: 4vh;
 }
 
@@ -116,6 +116,29 @@ margin-top: -1.5vh;
    border-top: 0.5vw solid blueviolet;
    padding: 1vh 0;
    box-shadow: 0 0 4px rgba(0,0,0, 0.5);
+}
+
+@keyframes left {
+    0% {
+       letter-spacing: 1vw;
+   position: absolute;
+   background-color: rgba(0,0,0,0.5);
+   color: white;
+   width: 96vw;
+   font-size: 2vh;
+   border-top: 0.5vw solid blueviolet;
+   padding: 1vh 0;
+   box-shadow: 0 0 4px rgba(0,0,0, 0.5); 
+    }
+    
+    100% {
+        position: relative; 
+        padding: 16vh 1.5vw;
+        width: 1.5vw;
+        display: grid;
+        border-left: 0.5vw solid blueviolet;
+        border-top: 0.5vw solid transparent;
+    }
 }
 
 #oldcontainer {
@@ -136,7 +159,7 @@ margin-top: -1.5vh;
         }
         
 figure {   
-           margin: 1.4%;            
+           margin: 2vh;            
            text-align: center;
            cursor: pointer;
            pointer-events: auto; 
