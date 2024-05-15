@@ -7,19 +7,19 @@ function figureexpand(figureId) {
                     
             ts = figure.querySelector(".trailerscreen");
             ts.style.display = "block";
-            ts.style.animation ="trailer 1.5s ease forwards";
+            ts.style.animation ="trailer 2s ease forwards";
                      
             md = figure.querySelector(".metadata");
             md.style.display = "block";
-            md.style.animation ="md 1.5s ease forwards";
+            md.style.animation ="md 2s ease forwards";
             
             db = figure.querySelector("#dbsection");
             db.style.display ="flex";
-            db.style.animation ="db 1.5s ease forwards";   
+            db.style.animation ="db 2s ease forwards";   
 
             c = document.querySelector("#close");
             c.style.display ="flex";
-            c.style.animation ="close 1s ease forwards";          
+            c.style.animation ="close 1.5s ease forwards";          
         }
 
         function reset() {
