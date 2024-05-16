@@ -5,13 +5,13 @@ body {
     background-image: url('https://i.imghippo.com/files/9NI8H1715589424.png');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 #h-layer0 {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 6vh;
     background-color: blueviolet;
     top: 0;
@@ -21,7 +21,7 @@ body {
 #h-layer1 {
     position: absolute;
     z-index: 1;
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     background-color: rgba(0,0,0,0.5);
     box-shadow: 0 0 8px rgba(0,0,0,0.5);
@@ -29,10 +29,10 @@ body {
     left: 0;
 }
 
-main {  
-    margin: 8vh 0vw;
-    margin-left: 4vw;
+main {
+    margin-top: 10vh;    
     position: relative;
+    width: 100vw;
 }
 
 #logo {
@@ -76,7 +76,7 @@ margin-top: -1.5vh;
 }
 
 #newsection {
-    top: 2vh;
+    margin-left: 2vw;
     position: relative;
     display: flex;
     align-items: center;
@@ -121,10 +121,11 @@ margin-top: -1.5vh;
 }
 
 #oldsection {
+    height: 60vh;
+    margin: 2vh 2vw;
     position: relative;
     display:flex;
     justify-content: space-around;
-    top: 4vh;
 }
 
 #oldheading {
@@ -132,7 +133,7 @@ margin-top: -1.5vh;
    background-color: rgba(0,0,0,0.5);
    color: white;
    letter-spacing: 1vw;
-   width: 92.4vw;
+   width: 96vw;
    font-size: 2vh;
    border-top: 0.5vw solid blueviolet;
    padding: 1vh 0;
@@ -146,7 +147,7 @@ margin-top: -1.5vh;
    background-color: rgba(0,0,0,0.5);
    color: white;
    letter-spacing: 3;
-   width: 96vw;
+   width: 100vw;
    font-size: 2vh;
    border-top: 0.5vw solid blueviolet;
    padding: 1vh 0;
@@ -154,7 +155,7 @@ margin-top: -1.5vh;
     }
     
     100% {
-        position: relative; 
+        position: absolute; 
         padding: 16vh 1.6vw;
         width: 1.6vw;
         line-height: 3;
@@ -163,8 +164,10 @@ margin-top: -1.5vh;
         border-top: 0.5vw solid transparent;
     }
 }
+
 #oldcontainer {
     margin-top: 2vh;
+    width: 100%;
     height: 50vh;
     display: flex;
     flex-wrap: wrap;
@@ -176,7 +179,7 @@ margin-top: -1.5vh;
 .poster {
             height: 20vh;
             border: 2px solid rgba(0,0,0, 0.1);
-            box-shadow: 0 0 8px rgba(0,0,0,0.4);
+            box-shadow: 0 0 10px rgba(0,0,0,0.4);
             
         }
         
@@ -407,4 +410,4 @@ figcaption:hover {
          margin-bottom: 0;
          transform: rotate(360deg);         
      }
-    }
+        }
