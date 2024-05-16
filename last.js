@@ -1,3 +1,7 @@
+window.onload = function() {
+        alert("🙏🏼 Thanks for Visiting");
+    };
+
 function figureexpand(figureId) {
             var bs = document.getElementById("blackshade");
             bs.style.display ="block";
