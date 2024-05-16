@@ -25,13 +25,9 @@
             <svg style="transform: scaleX(-1);" xmlns="http://www.w3.org/2000/svg" width="2vh" height="2vh" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"> <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/> </svg>&nbsp;&nbsp;
             <input type="text" id="searchInput" placeholder="search...">
         </div>                          
-    </header>  
-    <center id="notFound" style="display:none;color: blueviolet;font-size: 5vh;margin-top: 8vh;text-shadow: 
-        -0.5px -0.5px 0 rgba(0,0,0,0.8),  
-        0.5px -0.5px 0 rgba(0,0,0,0.8),
-        -0.5px 0.5px 0 rgba(0,0,0,0.8),
-        0.5px 0.5px 0 rgba(0,0,0,0.8);">Not Found</center>          
-    <main>            
+    </header>               
+    <main>  
+        <center id="searchResults"></center>
         <div id="newsection">
                 <center id="newheading">
                     <span>N</span>
@@ -1604,34 +1600,41 @@
         <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
       </svg>&nbsp;<p style="font-size: 2vh;">close</p>
     </div>
-    <script>   document.getElementById('searchInput').addEventListener('input', function() {
-  var searchTerm = this.value.toLowerCase();
+    <script> 
+        document.getElementById('searchInput').addEventListener('input', function() {
+  var searchTerm = this.value.trim().toLowerCase(); // Trim whitespace and convert to lowercase
+  var searchResultsDiv = document.getElementById('searchResults');
   var figures = document.getElementsByTagName('figure');
-  var notFound = document.getElementById('notFound');
-  var nh = document.getElementById('newheading');
-  var oh = document.getElementById('oldheading');
-  var os = document.getElementById('oldsection');
+  var resultsHTML = '';
+
+  // Check if search input is empty
+  if (searchTerm === '') {
+    searchResultsDiv.innerHTML = ''; // Clear search results
+    searchResultsDiv.style.display = 'none'; // Hide searchResults div
+    return; // Exit function early
+  }
+
+  // Clear previous search results
+  searchResultsDiv.innerHTML = '';
 
   for (var i = 0; i < figures.length; i++) {
     var caption = figures[i].getElementsByTagName('figcaption')[0].textContent.toLowerCase();
+    
     if (caption.includes(searchTerm)) {
-      figures[i].style.display = 'block';
-      nh.style.position = 'absolute';
-      oh.style.position = 'absolute';
-    } else {
-      figures[i].style.display = 'none';
-      nh.style.position = 'relative'; 
-      oh.style.animation = 'left 1s ease forwards';
-      os.style.justifyContent = 'flex-start';
+      var figureClone = figures[i].cloneNode(true); // Clone the figure element
+      resultsHTML += figureClone.outerHTML;
     }
   }
 
-  // Show "not found" if no matches found
-  if (document.querySelectorAll('figure[style="display: block;"]').length === 0) {
-    notFound.style.display = 'block';
+  // Display search results
+  if (resultsHTML === '') {
+    searchResultsDiv.innerHTML = '<p>😕&nbsp;No results found</p>';
   } else {
-    notFound.style.display = 'none';
+    searchResultsDiv.innerHTML = resultsHTML;
   }
+
+  // Show searchResults div
+  searchResultsDiv.style.display = 'block';
 });
     </script>
 </body>
