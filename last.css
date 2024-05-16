@@ -20,7 +20,7 @@ body {
 
 /* For WebKit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
-  width: 5px; /* Width of the scrollbar */
+  width: 2.5px; /* Width of the scrollbar */
 }
 
 /* Track (the area behind the scrollbar) */
