@@ -28,7 +28,8 @@ body {
 }
 
 main {  
-    margin: 8vh 4vw;
+    margin: 8vh 0;
+    margin-left: 4vw
     position: relative;
 }
 
@@ -82,30 +83,30 @@ margin-top: -1.5vh;
 #newheading {
     background-color: rgba(0,0,0,0.5);
     display: grid;
-    padding:  10vh 1.5vw;
-    height: 10vh;
+    line-height: 3;
+    padding:  6vh 1.5vw;
     position: absolute;
     color: white;
     border-left: 0.5vw solid blueviolet;
     font-size: 2vh;
-    box-shadow: 0 0 4px rgba(0,0,0, 0.5);
+    box-shadow: 0 0 8px rgba(0,0,0, 0.5);
     animation: nh 3s ease infinite;
 }
 
 @keyframes nh {
     0% {
-        padding: 10vh 1.5vw;
-        width: 0.1vw;
+        padding: 5vh 1.5vw;
+        width: 01vw;
     }
     
     50% {
-        padding: 10vh 1.5vw;
+        padding: 5vh 1.5vw;
         width: 5vw;
     }
     
     100% {
-        padding: 10vh 1.5vw;
-        width: 0.1vw;
+        padding: 5vh 1.5vw;
+        width: 0vw;
     }
 }
 
@@ -129,11 +130,11 @@ margin-top: -1.5vh;
    position: absolute;
    background-color: rgba(0,0,0,0.5);
    color: white;
-   width: 96vw;
+   width: 92.4vw;
    font-size: 2vh;
    border-top: 0.5vw solid blueviolet;
    padding: 1vh 0;
-   box-shadow: 0 0 4px rgba(0,0,0, 0.5);
+   box-shadow: 0 0 8px rgba(0,0,0, 0.5);
 }
 
 @keyframes left {
@@ -146,13 +147,14 @@ margin-top: -1.5vh;
    font-size: 2vh;
    border-top: 0.5vw solid blueviolet;
    padding: 1vh 0;
-   box-shadow: 0 0 4px rgba(0,0,0, 0.5); 
+   box-shadow: 0 0 8px rgba(0,0,0, 0.5); 
     }
     
     100% {
         position: relative; 
-        padding: 16vh 1.5vw;
-        width: 1.5vw;
+        padding: 16vh 1.6vw;
+        line-height: 3;
+        width: 1.6vw;
         display: grid;
         border-left: 0.5vw solid blueviolet;
         border-top: 0.5vw solid transparent;
