@@ -29,7 +29,7 @@ body {
 
 main {  
     margin: 8vh 0;
-    margin-left: 4vw
+    margin-left: 4vw;
     position: relative;
 }
 
@@ -115,7 +115,7 @@ margin-top: -1.5vh;
     align-items: flex-start;
     overflow-x: auto;
     white-space: nowrap;
-    width: 96vw;
+    width: 100vw;
 }
 
 #oldsection {
