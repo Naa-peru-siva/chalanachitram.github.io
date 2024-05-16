@@ -28,7 +28,7 @@ body {
 }
 
 main {  
-    margin: 8vh 0;
+    margin: 8vh 0vw;
     margin-left: 4vw;
     position: relative;
 }
@@ -84,7 +84,7 @@ margin-top: -1.5vh;
     background-color: rgba(0,0,0,0.5);
     display: grid;
     line-height: 3;
-    padding:  6vh 1.5vw;
+    padding: 5vh 1.5vw;
     position: absolute;
     color: white;
     border-left: 0.5vw solid blueviolet;
@@ -95,17 +95,17 @@ margin-top: -1.5vh;
 
 @keyframes nh {
     0% {
-        padding: 5vh 1.5vw;
-        width: 01vw;
+        padding: 6vh 1.5vw;
+        width: 0vw;
     }
     
     50% {
-        padding: 5vh 1.5vw;
+        padding: 6vh 1.5vw;
         width: 5vw;
     }
     
     100% {
-        padding: 5vh 1.5vw;
+        padding: 6vh 1.5vw;
         width: 0vw;
     }
 }
@@ -126,10 +126,10 @@ margin-top: -1.5vh;
 }
 
 #oldheading {
-   letter-spacing: 1vw;
    position: absolute;
    background-color: rgba(0,0,0,0.5);
    color: white;
+   letter-spacing: 1vw;
    width: 92.4vw;
    font-size: 2vh;
    border-top: 0.5vw solid blueviolet;
@@ -143,6 +143,7 @@ margin-top: -1.5vh;
    position: absolute;
    background-color: rgba(0,0,0,0.5);
    color: white;
+   letter-spacing: 3;
    width: 96vw;
    font-size: 2vh;
    border-top: 0.5vw solid blueviolet;
@@ -153,8 +154,8 @@ margin-top: -1.5vh;
     100% {
         position: relative; 
         padding: 16vh 1.6vw;
-        line-height: 3;
         width: 1.6vw;
+        line-height: 3;
         display: grid;
         border-left: 0.5vw solid blueviolet;
         border-top: 0.5vw solid transparent;
@@ -173,7 +174,7 @@ margin-top: -1.5vh;
 .poster {
             height: 20vh;
             border: 2px solid rgba(0,0,0, 0.1);
-            box-shadow: 0 0 10px rgba(0,0,0,0.4);
+            box-shadow: 0 0 8px rgba(0,0,0,0.4);
             
         }
         
@@ -404,4 +405,4 @@ figcaption:hover {
          margin-bottom: 0;
          transform: rotate(360deg);         
      }
-}
+    }
