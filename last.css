@@ -18,6 +18,29 @@ body {
         0.5px 0.5px 0 rgba(0,0,0,0.1);
 }
 
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+/* Track (the area behind the scrollbar) */
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1); /* Color of the track */
+}
+
+/* Handle (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: rgba(138, 43, 226, 0.4); /* Full opacity */
+; /* Color of the handle */
+  border-radius: 1px; /* Rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(138, 43, 226, 1); /* Darker color on hover */
+}
+
+
 #h-layer0 {
     position: relative;
     width: 100%;
