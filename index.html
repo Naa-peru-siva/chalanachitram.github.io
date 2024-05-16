@@ -1610,6 +1610,7 @@
   var notFound = document.getElementById('notFound');
   var nh = document.getElementById('newheading');
   var oh = document.getElementById('oldheading');
+  var os = document.getElementById('oldsection');
 
   for (var i = 0; i < figures.length; i++) {
     var caption = figures[i].getElementsByTagName('figcaption')[0].textContent.toLowerCase();
@@ -1620,7 +1621,8 @@
     } else {
       figures[i].style.display = 'none';
       nh.style.position = 'relative'; 
-      oh.style.animation = 'left 1s ease forwards';                 
+      oh.style.animation = 'left 1s ease forwards';
+      os.style.justifyContent = 'flex-start';
     }
   }
 
